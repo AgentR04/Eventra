@@ -1,3 +1,161 @@
-@import 'tailwindcss';
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import "tailwindcss";
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+:root {
+  --primary: #3b82f6;
+  --secondary: #10b981;
+  --accent: #8b5cf6;
+  --dark: #1e293b;
+  --light: #f8fafc;
+}
+
+.dark {
+  --primary: #60a5fa;
+  --secondary: #34d399;
+  --accent: #a78bfa;
+  --dark: #0f172a;
+  --light: #1e293b;
+}
+
+* {
+  transition: all 0.2s ease-in-out;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background-color: #0f172a;
+  color: #f8fafc !important;
+}
+
+/* Modern Card Styles */
+.card-hover {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1),
+    0 8px 10px -6px rgba(0, 0, 0, 0.1);
+}
+
+.dark .card-hover:hover {
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5),
+    0 8px 10px -6px rgba(0, 0, 0, 0.4);
+}
+
+/* Gradient Backgrounds */
+.bg-gradient-primary {
+  background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+}
+
+.bg-gradient-secondary {
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+}
+
+.bg-gradient-accent {
+  background: linear-gradient(135deg, #8b5cf6 0%, #6d28d9 100%);
+}
+
+/* Dark Mode Specific Styles */
+.dark .bg-white {
+  background-color: #1e293b;
+  color: #f8fafc;
+}
+
+.dark .text-gray-800 {
+  color: #f1f5f9;
+}
+
+.dark .text-gray-700 {
+  color: #e2e8f0;
+}
+
+.dark .text-gray-600 {
+  color: #cbd5e1;
+}
+
+.dark .text-gray-500 {
+  color: #94a3b8;
+}
+
+.dark .text-gray-400 {
+  color: #64748b;
+}
+
+.dark .border-gray-200 {
+  border-color: #334155;
+}
+
+.dark .border-gray-300 {
+  border-color: #475569;
+}
+
+.dark .bg-gray-50 {
+  background-color: #1e293b;
+}
+
+.dark .bg-gray-100 {
+  background-color: #1e293b;
+}
+
+.dark .shadow-md {
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3),
+    0 2px 4px -1px rgba(0, 0, 0, 0.2);
+}
+
+/* Glass Effect */
+.glass {
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+/* Animation Classes */
+.fade-in {
+  animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.slide-in {
+  animation: slideIn 0.5s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c5c5c5;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}

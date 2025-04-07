@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 
 const About = () => {
   return (
-    <div>
+    <div className="dark">
       <div className="bg-gradient-to-br from-primary/10 to-secondary/10 py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
